@@ -8,8 +8,110 @@
   <script defer src="./dist/js/bundle.js"></script>
 </head>
 <body>
-  hello
-  <div class="hello"></div>
-  <div>what a waste</div>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momentum</title>
+  <script src=""></script>
+  <script src="font-awesome"></script>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+    <div class="main-view">
+      <!-- 헤더 영역 -->
+      <header>
+        <section class="weather">
+          <div class="weather-info">
+            <img src="" alt="Weather Icon" class="weather-info-icon">
+            <span class="weather-celsius"></span>
+          </div>
+
+          <div class="weather-location"></div>
+        </section>
+
+        <section class="weater-popup">
+          <div class="weater-popup-dest">
+            <p class="weather-popup-dest-location"></p>
+            <p class="weather-popup-dest-info"></p>
+          </div>
+
+          <div class="weater-popup-status">
+            <img src="" alt="" class="weather-popup-status-icon">
+            <span class="weather-popup-status-celsius"></span>
+          </div>
+
+          <!-- <ul class="week-weather">
+          </ul> -->
+        </section>
+      </header>
+
+      <main>
+        <!-- 현재 시간 -->
+        <section class="clock-name-container">
+          <div class="clock">10:00</div>
+          
+          <!-- 현재 시간과 인삿말 -->
+          <div class="greeting">
+            Good<span class="greeting-time"></span>
+              <!-- Morning, Afternoon, Evening -->
+
+            <!-- 유저 입력부분 -->
+            <input type="text" class="greeting-uername-input is-active">
+            <span class="greeting-username"></span>
+            <button type="button" class="greeting-edit-btn">···</button>
+          </div>
+        </section>
+
+        <!-- 메인 todo -->
+        <section class="main-todo">
+
+          <div class="main-focus is-active">
+            <div class="main-focus-sen">What is your Main Focus for Today?</div>
+            <input type="text" size= "20" class="main-focus-input">
+          </div>
+
+          <div class="main-todo-list">
+            <div class="main-todo-today">Today</div>
+            <div class="main-todo-text">
+              <input type="checkbox">
+              <span class="main-todo-text-content">Go out with Bongcheol</span>
+              <button class="main-todo-close-btn">X</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <!-- 배경 정보 -->
+        <section class="background-info">
+          <p class="background-info-location">LosAngeles, California</p>
+          <p class="background-info-photographer">BongCheol Shin</p>
+        </section>
+
+        <!-- 인용구  -->
+        <section class="quotes-info">
+          <p class="quotes-info-phrase">Just Do it!</p>
+          <p class="quotes-info-author">Nike</p>
+        </section>
+
+          <!-- Todo 리스트 -->
+        <section class="todo-list-btn">Todo</section>
+        <section class="todo-list-popup">
+          <div class="todo-list-popup-day">Today</div>
+          <ul class="todo-list-content">
+            <li id = "1" class="todo-list-item">
+              <input type="checkbox" class="todo-list-checkbox" id="ck-1">
+              <label for="ck-1">HTML</label>
+              <i class="todo-list-remove"></i>
+            </li>
+          </ul>
+          <input type="text" placeholder="What are you going to do?" class="todo-list-input">
+        </section>
+      </footer>
+    </div>
+</body>
+</html>
 </body>
 </html>

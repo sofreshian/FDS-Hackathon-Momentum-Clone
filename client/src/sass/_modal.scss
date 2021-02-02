@@ -26,8 +26,8 @@
     color: #aaa;
   }
 
-  .weather-popup-status-icon {
-  }
+  // .weather-popup-status-icon {
+  // }
 
   .weather-popup-status-celsius {
     font-size: 5rem;
@@ -95,4 +95,8 @@
 .todo-list-remove {
   position: absolute;
   right: 10%;
+}
+
+.todo-list-content li input[checked] + label {
+  text-decoration: line-through;
 }

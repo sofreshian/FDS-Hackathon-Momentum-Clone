@@ -1,3 +1,7 @@
 import weather from './weather/weather';
+import allTodos from './subTodos/todo';
 
-weather();
+window.onload = () => {
+  allTodos();
+  weather();
+};

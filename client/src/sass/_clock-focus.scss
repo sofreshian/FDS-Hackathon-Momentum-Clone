@@ -17,7 +17,7 @@ main {
   .clock {
     font-size: 16rem;
     text-align: center;
-    padding-top: 250px;
+    padding-top: 20vh;
   }
 
   .greeting {
@@ -57,6 +57,7 @@ main {
       width: 600px;
       color: #fff;
       font-size: 4rem;
+      text-align: center;
       &:focus {
         outline: none;
       }

@@ -12,7 +12,7 @@
 
 .weather-popup {
   position: absolute;
-  top: 100px;
+  top: 80px;
   right: 8px;
   box-sizing: border-box;
   padding: 20px;
@@ -23,6 +23,7 @@
 
   .weather-popup-dest-info {
     font-size: 1.6rem;
+    color: #aaa;
   }
 
   .weather-popup-status-icon {
@@ -31,6 +32,12 @@
   .weather-popup-status-celsius {
     font-size: 5rem;
     font-weight: 700;
+  }
+
+  .weather-popup-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

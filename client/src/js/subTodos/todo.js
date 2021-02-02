@@ -1,7 +1,9 @@
-import render from './render';
+import getTodos from './getTodos';
+import addTodo from './addTodo';
 
 const allTodos = () => {
-  render();
+  getTodos();
+  addTodo();
 };
 
 export default allTodos;

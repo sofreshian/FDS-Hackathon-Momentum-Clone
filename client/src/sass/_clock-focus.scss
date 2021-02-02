@@ -1,0 +1,75 @@
+.main-view {
+  // position: relative;
+}
+main {
+  background-color: red;
+}
+
+main {
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  height: 80vh;
+  color: #fff;
+  width: 100%;
+
+  .clock {
+    font-size: 16rem;
+    text-align: center;
+    padding-top: 250px;
+  }
+
+  .greeting {
+    text-align: center;
+
+    .greeting-main {
+      font-size: 6rem;
+    }
+
+    .greeting-username-input {
+      border: none;
+      background: transparent;
+      border-bottom: 5px solid #fff;
+      font-size: 6rem;
+      color: #fff;
+    }
+
+    .greeting-edit-btn {
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 4rem;
+    }
+  }
+  .main-todo {
+    text-align: center;
+    margin-top: 100px;
+
+    .main-focus-sen {
+      font-size: 4rem;
+    }
+
+    .main-focus-input {
+      border: none;
+      border-bottom: 5px solid #fff;
+      background: transparent;
+      width: 600px;
+      color: #fff;
+      font-size: 4rem;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.greeting-username-input,
+.greeting-username,
+.main-focus,
+.main-todo-list {
+  display: none;
+}
+.is-active {
+  display: inline-block;
+}

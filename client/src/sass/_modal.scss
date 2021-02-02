@@ -89,3 +89,7 @@
   position: absolute;
   right: 10%;
 }
+
+.todo-list-content li input[checked] + label {
+  text-decoration: line-through;
+}

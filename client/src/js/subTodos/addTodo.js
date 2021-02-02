@@ -1,12 +1,12 @@
 import render from './render';
-import todos from './todoState';
+import state from './todoState';
 
 const $todoListInput = document.querySelector('.todo-list-input');
 
 export default () => {
   // 아이디 생성부분
   const generateId = () =>
-    todos.length ? Math.max(...todos.map(todo => todo.id)) + 1 : 1;
+    state.todos.length ? Math.max(...state.todos.map(todo => todo.id)) + 1 : 1;
 
   //  addTodo 함수
   const addTodo = async content => {

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Momentum</title>
   <link href="./dist/css/style.css" rel="stylesheet"></link>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
   <script defer src="./dist/js/bundle.js"></script>
 </head>
@@ -15,25 +17,23 @@
       <section class="weather">
         <div class="weather-info">
           <img src="" alt="Weather Icon" class="weather-info-icon">
-          <span class="weather-celsius"></span>
+          <span class="weather-celsius">10도</span>
         </div>
-
         <div class="weather-location"></div>
       </section>
 
-      <section class="weater-popup">
-        <div class="weater-popup-dest">
-          <p class="weather-popup-dest-location"></p>
-          <p class="weather-popup-dest-info"></p>
+      <section class="weather-popup modal">
+        <div class="weather-popup-dest">
+          <p class="weather-popup-dest-location">부천</p>
+          <p class="weather-popup-dest-info">Clear sky</p>
         </div>
 
-        <div class="weater-popup-status">
-          <img src="" alt="" class="weather-popup-status-icon">
-          <span class="weather-popup-status-celsius"></span>
+        <div class="weather-popup-status">
+          <img src="" alt="Weather Icon" class="weather-popup-status-icon">
+          <span class="weather-popup-status-celsius">-5도</span>
         </div>
 
-        <!-- <ul class="week-weather">
-        </ul> -->
+        <!-- <ul class="week-weather"> 요일별 날씨 정보 </ul> -->
       </section>
     </header>
 
@@ -44,11 +44,11 @@
         
         <!-- 현재 시간과 인삿말 -->
         <div class="greeting">
-          Good<span class="greeting-time"></span>
+          <span class="greeting-main">Good<span class="greeting-time"></span></span>
             <!-- Morning, Afternoon, Evening -->
 
           <!-- 유저 입력부분 -->
-          <input type="text" class="greeting-uername-input is-active">
+          <input type="text" class="greeting-username-input is-active" size="1">
           <span class="greeting-username"></span>
           <button type="button" class="greeting-edit-btn">···</button>
         </div>
@@ -82,21 +82,22 @@
 
       <!-- 인용구  -->
       <section class="quotes-info">
-        <p class="quotes-info-phrase">Just Do it!</p>
-        <p class="quotes-info-author">Nike</p>
+        <p class="quotes-info-phrase">“Failure is simply the opportunity to begin again,
+          this time more intelligently.”</p>
+        <p class="quotes-info-author">Henry Ford</p>
       </section>
 
         <!-- Todo 리스트 -->
-      <section class="todo-list-btn">Todo</section>
-      <section class="todo-list-popup">
-        <div class="todo-list-popup-day">Today</div>
-        <ul class="todo-list-content">
-          <li id = "1" class="todo-list-item">
-            <input type="checkbox" class="todo-list-checkbox" id="ck-1">
-            <label for="ck-1">HTML</label>
-            <i class="todo-list-remove"></i>
-          </li>
-        </ul>
+        <section class="todo-list-btn">Todo</section>
+        <section class="todo-list-popup modal">
+          <div class="todo-list-popup-day">Today</div>
+          <ul class="todo-list-content">
+            <!-- <li id = "1" class="todo-list-item">
+              <input type="checkbox" class="todo-list-checkbox" id="ck-1">
+              <label for="ck-1">HTML</label>
+              <i class="todo-list-remove"></i>
+            </li> -->
+          </ul>
         <input type="text" placeholder="What are you going to do?" class="todo-list-input">
       </section>
     </footer>

@@ -8,6 +8,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   // height: 50px;
+  position: relative;
 }
 .background-info {
   text-align: left;
@@ -43,10 +44,15 @@ footer {
 }
 
 .todo-list-btn {
+  color: #ffffff;
   font-size: 1.6rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .todo-list-popup {
+  color: #ffffff;
   text-align: right;
   width: 30%;
 }

@@ -1,14 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Noto+Sans+KR");
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Noto+Sans+KR');
 
 footer {
-  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   // background: rgba(60, 120, 180, 0.5);
   background-color: blue;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // height: 50px;
+  height: 10vh;
   position: relative;
+  box-sizing: border-box;
+  padding-top: 40px;
 }
 .background-info {
   text-align: left;
@@ -26,7 +28,7 @@ footer {
   color: #ffffff;
 }
 
-.quotes-info{
+.quotes-info {
   display: flex;
   flex-flow: column;
   text-align: center;

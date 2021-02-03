@@ -27,12 +27,17 @@ main {
       font-size: 6rem;
     }
 
+    .greeting-username {
+      font-size: 6rem;
+    }
+
     .greeting-username-input {
       border: none;
       background: transparent;
       border-bottom: 5px solid #fff;
       font-size: 6rem;
       color: #fff;
+      outline: none;
     }
 
     .greeting-edit-btn {
@@ -68,7 +73,8 @@ main {
 .greeting-username-input,
 .greeting-username,
 .main-focus,
-.main-todo-list {
+.main-todo-list,
+.greeting-edit-btn {
   display: none;
 }
 .is-active {

@@ -19,6 +19,8 @@ let todos = [
   }
 ];
 
+let name = 'hello1';
+
 const app = express();
 
 app.use(cors());
@@ -26,6 +28,10 @@ app.use(express.json());
 
 app.get('/todos', (req, res) => {
   res.send(todos);
+});
+
+app.get('/name', (req, res) => {
+  res.send(name);
 });
 
 app.get('/todos/:id', (req, res) => {
@@ -37,6 +43,12 @@ app.post('/todos', (req, res) => {
 
   todos = [req.body, ...todos];
   res.send(todos);
+});
+
+app.post('/name', (req, res) => {
+
+  name = req.body.name;
+  res.send(name);
 });
 
 app.patch('/todos/:id', (req, res) => {

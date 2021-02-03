@@ -2,7 +2,6 @@ import axios from 'axios';
 import nameEdit from './nameEdit';
 
 export default () => {
-  // 아이디 생성부분
   const $userNameInput = document.querySelector('.greeting-username-input');
   const postName = async e => {
     if (e.key !== 'Enter') {

@@ -2,21 +2,21 @@ import express from 'express';
 import cors from 'cors';
 
 let todos = [
-  {
-    id: 3,
-    content: 'JS',
-    completed: false
-  },
-  {
-    id: 2,
-    content: 'CSS',
-    completed: true
-  },
-  {
-    id: 1,
-    content: 'HTML',
-    completed: false
-  }
+  // {
+  //   id: 3,
+  //   content: 'JS',
+  //   completed: false
+  // },
+  // {
+  //   id: 2,
+  //   content: 'CSS',
+  //   completed: true
+  // },
+  // {
+  //   id: 1,
+  //   content: 'HTML',
+  //   completed: false
+  // }
 ];
 
 let name = '';

@@ -3,10 +3,15 @@
   color: #fff;
   opacity: 0.8;
   border-radius: 5px;
-  display: none;
+  // display: none;
+  opacity: 0;
 
   &.is-active {
     display: block;
+    opacity: 100;
+    background-color: #00000090;
+    // transform: translate3d(0, 0, 0);
+    transition: all 1s;
   }
 }
 
@@ -41,15 +46,24 @@
   }
 }
 
+.todo-list-btn {
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-weight: 900;
+}
+
 .todo-list-container {
   position: relative;
   right: 80px;
   text-align: center;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-end;
+  // justify-content: flex-end;
+  justify-content: flex-start;
   cursor: pointer;
-  width: 30%;
+  width: 1000px;
 }
 
 .todo-list-popup {
@@ -59,7 +73,7 @@
   left: 0%;
   bottom: 120%;
   padding: 20px;
-  // transition: all 1s;d
+  
 }
 
 .todo-list-popup-day {
@@ -79,7 +93,27 @@
   font-size: 1.3rem;
   margin: 5px;
   display: flex;
-  flex-direction: row;
+  width: 80%;
+}
+
+.todo-list-checkbox {
+  vertical-align: -1px;
+
+}
+
+.todo-list-item > label {
+  margin-left: 10px;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  line-height: 20px;
+
+}
+
+.todo-list-remove {
+  position: absolute;
+  right: 10%;
 }
 
 .todo-list-input {
@@ -92,11 +126,7 @@
   max-width: 100%;
 }
 
-.todo-list-remove {
-  position: absolute;
-  right: 10%;
-}
-
 .todo-list-content li input[checked] + label {
   text-decoration: line-through;
+  color: #797777;
 }

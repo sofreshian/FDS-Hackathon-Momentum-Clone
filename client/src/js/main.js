@@ -1,3 +1,4 @@
+import background from './background/background';
 import weather from './weather/weather';
 import allTodos from './subTodos/todo';
 import mainFocus from './mainFocus/mainFocus';
@@ -8,4 +9,5 @@ window.onload = () => {
   weather();
   name();
   mainFocus();
+  background();
 };

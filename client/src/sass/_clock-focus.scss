@@ -27,12 +27,17 @@ main {
       font-size: 6rem;
     }
 
+    .greeting-username {
+      font-size: 6rem;
+    }
+
     .greeting-username-input {
       border: none;
       background: transparent;
       border-bottom: 5px solid #fff;
       font-size: 6rem;
       color: #fff;
+      outline: none;
     }
 
     .greeting-edit-btn {
@@ -63,12 +68,41 @@ main {
       }
     }
   }
+
+  .main-todo-list {
+    .main-todo-today {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .main-todo-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-todo-checkbox {
+      transform: scale(2);
+      margin-right: 15px;
+    }
+
+    .main-todo-text-content {
+      font-size: 3.5rem;
+      margin-right: 15px;
+    }
+
+    .main-todo-close-btn {
+      font-size: 3.5rem;
+      cursor: pointer;
+  }
 }
 
 .greeting-username-input,
 .greeting-username,
 .main-focus,
-.main-todo-list {
+.main-todo-list,
+.greeting-edit-btn {
   display: none;
 }
 .is-active {

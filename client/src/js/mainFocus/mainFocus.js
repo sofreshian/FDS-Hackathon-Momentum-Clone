@@ -1,7 +1,9 @@
 import renderTime from './renderTime';
-import nameEdit from './nameEdit';
+import fetchMainFocus from './fetchMainFocus';
+import addMainFocus from './addMainFocus';
 
 export default () => {
   renderTime();
-  nameEdit();
+  fetchMainFocus();
+  addMainFocus();
 };

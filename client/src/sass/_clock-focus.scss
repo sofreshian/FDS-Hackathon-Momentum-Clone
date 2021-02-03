@@ -68,6 +68,34 @@ main {
       }
     }
   }
+
+  .main-todo-list {
+    .main-todo-today {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .main-todo-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-todo-checkbox {
+      transform: scale(2);
+      margin-right: 15px;
+    }
+
+    .main-todo-text-content {
+      font-size: 3.5rem;
+      margin-right: 15px;
+    }
+
+    .main-todo-close-btn {
+      font-size: 3.5rem;
+      cursor: pointer;
+  }
 }
 
 .greeting-username-input,

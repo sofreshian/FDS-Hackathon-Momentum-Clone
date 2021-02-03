@@ -19,7 +19,9 @@ let todos = [
   }
 ];
 
-let name = 'hello1';
+let name = '';
+
+let focus = '';
 
 const app = express();
 
@@ -32,6 +34,10 @@ app.get('/todos', (req, res) => {
 
 app.get('/name', (req, res) => {
   res.send(name);
+});
+
+app.get('/focus', (req, res) => {
+  res.send(focus);
 });
 
 app.get('/todos/:id', (req, res) => {
@@ -51,6 +57,12 @@ app.post('/name', (req, res) => {
   res.send(name);
 });
 
+app.post('/focus', (req, res) => {
+
+  focus = req.body.focus;
+  res.send(focus);
+});
+
 app.patch('/todos/:id', (req, res) => {
   const id = +req.params.id;
   const completed = req.body;
@@ -63,21 +75,6 @@ app.patch('/todos/:id', (req, res) => {
         }
       : todo
   );
-  res.send(todos);
-});
-
-app.patch('/todos', (req, res) => {
-  const completed = req.body;
-
-  todos = todos.map(todo => ({
-    ...todo,
-    ...completed
-  }));
-  res.send(todos);
-});
-
-app.delete('/todos/completed', (req, res) => {
-  todos = todos.filter(todo => !todo.completed);
   res.send(todos);
 });
 

@@ -18,7 +18,9 @@ export default () => {
       $greetingTime.textContent = ' Evening ';
     }
 
-    $clock.textContent = `${today.getHours()}:${
+    $clock.textContent = `${
+      today.getHours() < 10 ? `0${today.getHours()}` : today.getHours()
+    }:${
       today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes()
     }`;
   }, 1000);

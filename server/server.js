@@ -85,6 +85,11 @@ app.delete('/todos/:id', (req, res) => {
   res.send(todos);
 });
 
+app.delete('/focus', (req, res) => {
+  focus = '';
+  res.send(focus);
+});
+
 app.listen('8000', () => {
   console.log('Server is listening on http://localhost:8000');
 });

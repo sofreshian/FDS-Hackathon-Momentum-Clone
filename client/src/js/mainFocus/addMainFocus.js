@@ -12,9 +12,9 @@ export default () => {
     const res = await axios.post('http://localhost:8000/focus', {
       focus: $mainFocusInput.value
     });
+    renderMainFocus(res.data);
     $mainFocus.classList.remove('is-active');
     $mainTodoList.classList.add('is-active');
-    renderMainFocus(res.data);
     $mainFocusInput.value = '';
   };
   $mainFocusInput.addEventListener('keyup', addMainFocus);

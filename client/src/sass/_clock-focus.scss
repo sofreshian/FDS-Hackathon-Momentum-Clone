@@ -102,10 +102,14 @@ main {
   .greeting-username,
   .main-focus,
   .main-todo-list,
-  .greeting-edit-btn {
+  .greeting-edit-btn,
+  .hide {
     display: none;
   }
   .is-active {
+    display: inline-block;
+  }
+  .main-todo-text:hover > .hide {
     display: inline-block;
   }
 }

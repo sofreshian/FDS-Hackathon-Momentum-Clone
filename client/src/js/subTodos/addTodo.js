@@ -1,29 +1,33 @@
+import axios from 'axios';
 import render from './render';
-import state from './todoState';
+import getTodos from './getTodos';
+// import state from './todoState';
 
 const $todoListInput = document.querySelector('.todo-list-input');
 
 export default () => {
   // 아이디 생성부분
-  const generateId = () =>
-    state.todos.length ? Math.max(...state.todos.map(todo => todo.id)) + 1 : 1;
+  const generateId = async () => {
+    try {
+      const res = await axios.get('http://localhost:8000/todos')
+      return res.data.length
+        ? Math.max(...res.data.map(todo => todo.id)) + 1
+        : 1;
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   //  addTodo 함수
   const addTodo = async content => {
-    const res = await fetch('http://localhost:8000/todos', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify({
-        id: generateId(),
-        content,
-        completed: false
-      })
-    });
-
-    const rawTodos = await res.json();
-    render(rawTodos);
+    try {
+      const id = await generateId();
+      const res = await axios.post('http://localhost:8000/todos', { id, content, completed: false });
+      const rawTodos = res.data;
+      render(rawTodos);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   // Input 이벤트

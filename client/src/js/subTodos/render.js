@@ -1,11 +1,11 @@
-import state from './todoState';
-
+// import state from './todoState';
+let state;
 const $todoListContent = document.querySelector('.todo-list-content');
 
 const render = _todos => {
   let html = '';
-  state.todos = _todos;
-  state.todos.forEach(({ id, content, completed }) => {
+  state = _todos;
+  state.forEach(({ id, content, completed }) => {
     html += `  
     <li id="${id}" class="todo-list-item">
         <input id="ck-${id}" class="todo-list-checkbox" type="checkbox" ${

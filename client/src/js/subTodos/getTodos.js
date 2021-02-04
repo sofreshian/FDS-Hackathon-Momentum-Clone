@@ -1,9 +1,13 @@
+import axios from 'axios';
 import render from './render';
 
 const getTodos = async () => {
-  const res = await fetch('http://localhost:8000/todos');
-  const rawTodos = await res.json();
-  render(rawTodos);
+  try {
+    const res = await axios.get('http://localhost:8000/todos');
+    render(res.data);
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 export default getTodos;

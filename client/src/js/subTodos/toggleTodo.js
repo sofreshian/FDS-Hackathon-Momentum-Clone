@@ -1,20 +1,19 @@
+import axios from 'axios';
 import render from './render';
-import state from './todoState';
+// import state from './todoState';
 
+const state = axios
+  .get('http://localhost:8000/todos')
+  .then(({ data: _todos }) => _todos);
 const $todoListContent = document.querySelector('.todo-list-content');
 
 export default () => {
   const toggleTodo = async id => {
-    const completed = !state.todos.find(todo => todo.id === +id).completed;
-    // const todo = todos.todos.find(item => item.id === +id);
-    const res = await fetch(`http://localhost:8000/todos/${id}`, {
-      method: 'PATCH',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ completed })
-    });
-
-    const rawTodos = await res.json();
-    render(rawTodos);
+    const completed = !state.find(todo => todo.id === +id).completed;
+    axios
+      .patch(`http://localhost:8000/todos/${id}`, { completed })
+      .then(render)
+      .catch(console.error);
   };
 
   $todoListContent.onchange = e => {

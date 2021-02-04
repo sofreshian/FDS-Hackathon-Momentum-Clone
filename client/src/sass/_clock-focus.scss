@@ -2,7 +2,7 @@
   // position: relative;
 }
 main {
-  //background-color: red;
+  background-color: red;
 }
 
 main {
@@ -105,11 +105,23 @@ main {
   .greeting-edit-btn,
   .hide {
     display: none;
+    opacity: 0;
   }
   .is-active {
+    animation: fade-in 2s;
+    animation-fill-mode: forwards;
     display: inline-block;
   }
   .main-todo-text:hover > .hide {
     display: inline-block;
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

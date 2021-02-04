@@ -1,3 +1,4 @@
+import axios from 'axios';
 import renderQuote from './renderquote';
 
 const getQuote = async () => {

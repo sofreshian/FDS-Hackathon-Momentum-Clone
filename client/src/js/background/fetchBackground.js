@@ -1,3 +1,4 @@
+import axios from 'axios';
 import renderImage from './renderBackground';
 
 const accessKey = '5iAIiKDYmv_P_ObUQlw9Y9-d--ivWfRxdpEUR-Pd2cw';
